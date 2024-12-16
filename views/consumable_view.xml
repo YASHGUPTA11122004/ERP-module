@@ -1,0 +1,118 @@
+<odoo>
+    <!-- Tree View for Consumable Records -->
+    <record id="view_consumable_tree" model="ir.ui.view">
+        <field name="name">it_infra.consumable.tree</field>
+        <field name="model">it_infra.consumable.record</field>
+        <field name="arch" type="xml">
+            <tree string="Consumable Records">
+                <field name="unique_id" readonly="1" string="Unique ID"/>
+                <field name="user"/>
+                <field name="date"/>
+                <field name="location"/>
+                <field name="item"/>
+                <field name="name"/>
+                <field name="model_number"/>
+                <field name="serial_number"/>
+                <field name="part_number"/>
+                <field name="purchase"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for Consumable Record -->
+    <record id="view_consumable_form" model="ir.ui.view">
+        <field name="name">it_infra.consumable.form</field>
+        <field name="model">it_infra.consumable.record</field>
+        <field name="arch" type="xml">
+            <form string="Consumable Record">
+                <header>
+                    <button name="action_draft" string="To Draft" type="object" modifiers="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button class="oe_highlight" name="action_active" string="To Stock" type="object" modifiers="{'invisible': [('state', '!=', 'active')]}"/>
+                    <button class="oe_highlight" name="action_stored" string="To Issue" type="object" modifiers="{'invisible': [('state', '!=', 'stored')]}"/>
+                    <button class="oe_highlight" name="action_return" string="Return" type="object" modifiers="{'invisible': [('state', '!=', 'active')]}"/>
+                    <button class="oe_highlight" name="action_decommissioned" string="To Decommissioned" type="object" modifiers="{'invisible': [('state', '!=', 'decommissioned')]}"/>
+                    <field name="status" widget="statusbar" statusbar_visible="draft,active,stored,decommissioned"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="unique_id" readonly="1" string="Unique ID"/>
+                        <field name="item" placeholder="Select item" required="1"/>
+                        <field name="name" placeholder="Enter" required="1"/>
+                        <field name="model_number" placeholder="Enter Model Number"/>
+                        <field name="serial_number" placeholder="Enter Serial Number"/>
+                        <field name="part_number" placeholder="Enter Part Number"/>
+                        <field name="location" placeholder="Enter Location"/>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Enter additional details" widget="text"/>
+                    </group>
+                    <group>
+                        <field name="user" required="1"/>
+                        <field name="date" required="1"/>
+                    </group>
+                    <group>
+                         <group string="Warranty Details">
+                        <field name="warranty"/>
+                        <field name="warranty_expiration" readonly="1"/>
+                        <field name="warranty_remaining" readonly="1"/>
+                        <field name="warranty_certificate" filename="attachment_name" string="Warranty Certificate" widget="binary"/>
+                    </group>
+                    <group string="Commercial Details">
+                            <field name="invoice_copy" widget="binary" />
+                            <field name="supplier_email" />
+                            <field name="supplier_name" />
+                            <field name="supplier_contact" />
+                            <field name="supplier_website" />
+                    </group>
+
+                    </group>
+
+                    <notebook>
+                        <page string="Updation and Maintenance">
+                            <field name="updation_ids">
+                                <tree string="Updation Records" editable="bottom">
+                                    <field name="update_date"/>
+                                    <field name="update_description"/>
+                                    <field name="performed_by"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Maintenance">
+                            <field name="maintenance_ids">
+                                <tree string="Maintenance Records" editable="bottom">
+                                    <field name="maintenance_date"/>
+                                    <field name="maintenance_description"/>
+                                    <field name="performed_by"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Consumable Records -->
+    <record id="action_consumable_records" model="ir.actions.act_window">
+        <field name="name">Consumable Records</field>
+        <field name="res_model">it_infra.consumable.record</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_consumable_tree"/>
+        <field name="help" type="html">
+            <p>
+                Use this interface to manage consumable records. You can track updates and maintenance activities for each consumable item.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Item for Consumable Records -->
+    <menuitem
+        name="Consumable Records"
+        id="consumable_record_menu"
+        parent="goods_menu"
+        sequence="30"
+        action="action_consumable_records"
+        groups="base.group_user"
+    />
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Providers"
+        id="provider_menu"
+        sequence="40"
+        action="provider_action_view_form"
+        parent="network_device_menu"
+        groups="group_user" />
+
+</odoo>

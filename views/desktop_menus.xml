@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Desktops"
+        id="desktop_menu"
+        sequence="10"
+        action="desktop_action_view_form"
+        parent="root_menu"
+        groups="group_user" />
+
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="IT-Infra"
+        id="root_menu"
+        sequence="20"
+        groups="group_user" />
+
+    <menuitem name="Configuration"
+        id="configuration_menu"
+        sequence="90"
+        parent="root_menu"
+        groups="group_manager" />
+
+    <menuitem name="Categories"
+        id="configuration_category_menu"
+        sequence="30"
+        parent="configuration_menu"
+        groups="group_manager" />
+
+</odoo>

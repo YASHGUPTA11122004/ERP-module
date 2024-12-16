@@ -1,0 +1,9 @@
+<odoo>
+
+    <menuitem name="Peripheral Devices"
+        id="peripheral_device_menu"
+        sequence="70"
+        action="peripheral_device_action_view_form"
+        parent="root_menu"
+        groups="group_user" />
+</odoo>

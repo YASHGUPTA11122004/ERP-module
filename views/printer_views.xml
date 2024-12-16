@@ -1,0 +1,139 @@
+<odoo>
+    <data>
+
+        <!-- Action for Printer Form -->
+        <record id="action_it_infra_printer" model="ir.actions.act_window">
+            <field name="name">Printers</field>
+            <field name="res_model">it_infra.printer</field>
+            <field name="view_mode">tree,form</field>
+
+
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create your Printer here.
+                </p>
+            </field>
+        </record>
+
+        <!-- Printer Form View -->
+        <record id="view_it_infra_printer_form" model="ir.ui.view">
+            <field name="name">it.infra.printer.form</field>
+            <field name="model">it_infra.printer</field>
+            <field name="arch" type="xml">
+                <form string="Printer">
+                     <group>
+                    <field name="reference_number" readonly="1"/>
+                </group>
+                    <header>
+                    <button name="action_draft" string="To Draft" type="object" invisible="state not in ['active','stored','decommissioned']"/>
+                    <button class="oe_highlight" name="action_active" string="To Active" type="object" invisible="state not in ['draft']"/>
+                    <button class="oe_highlight" name="action_stored" string="To Stored" type="object" invisible="state not in ['active']"/>
+
+                    <button class="oe_highlight" name="action_return" string="Return" type="object" odoo='{"invisible": [["status", "!=", "active"]]}'/>
+
+                    <button class="oe_highlight" name="action_decommissioned" string="To Decommissioned" type="object" invisible="state not in ['stored']"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                    <sheet>
+                        <group>
+                            <group string="Technical Details">
+                                <field name="name" required="1"/>
+                                <field name="model"/>
+                                <field name="mac_address"/>
+                                <field name="cartridge"/>
+                                <field name="technology"/>
+                                <field name="location"/>
+                                <field name="ip_address"/>
+                                <field name="network_features"/>
+                                <field name="network_feature" invisible="not network_features"/>
+                            </group>
+                             <notebook>
+                            <page string="Credentials" invisible="not network_features">
+                                <field name="credential_ids">
+                                    <tree editable="bottom">
+                                        <field name="user_id"/>
+                                        <field name="username"/>
+                                        <field name="password"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                        <group string="Warranty Details">
+
+                                <field name="purchase_date"/>
+                                <field name="warranty"/>
+                                <field name="warranty_expired" readonly="1"/>
+                                <field name="warranty_remaining" readonly="1"/>
+                                <field name="warranty_certificate"/>
+                        </group>
+
+                            <group string="Commercial Details">
+
+                                <field name="invoice_copy"/>
+                                <field name="source_doc_numbers"/>
+                                <field name="seller_name"/>
+                                <field name="seller_email"/>
+                                <field name="seller_contact"/>
+                                <field name="seller_website"/>
+                            </group>
+
+                            <group string="Issued To">
+                                <field name="employee"/>
+                            </group>
+
+
+
+
+                           <group string="Printing Capability">
+                                <field name="printing_capability_a3"/>
+                                <field name="printing_capability_a4"/>
+                                <field name="printing_capability_a5"/>
+                           </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Maintenance Records">
+                                <field name="maintenance_ids">
+                                    <tree editable="top">
+                                        <field name="name"/>
+                                        <field name="maintenance_date"/>
+                                        <field name="maintenance_type"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List View for Printers -->
+        <record id="view_it_infra_printer_tree" model="ir.ui.view">
+            <field name="name">it.infra.printer.tree</field>
+            <field name="model">it_infra.printer</field>
+            <field name="arch" type="xml">
+                <tree string="Printers">
+                    <field name="name"/>
+                    <field name="model"/>
+                    <field name="source_doc_numbers"/>
+                    <field name="ip_address"/>
+                    <field name="mac_address"/>
+                    <field name="location"/>
+                    <field name="purchase_date"/>
+                    <field name="warranty"/>
+                    <field name="warranty_expired"/>
+                    <field name="warranty_remaining"/>
+                    <field name="network_feature"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action and form views for Printer Maintenance omitted for brevity -->
+
+        <!-- Menu item for Printers -->
+        <menuitem name="Printers" id="printer_menu" sequence="50" parent="root_menu" action="action_it_infra_printer"/>
+    </data>
+</odoo>

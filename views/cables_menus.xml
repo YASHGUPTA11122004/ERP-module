@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem name="Cables"
+              id="cable_menu"
+              sequence="20"
+              action="cable_action_view_form"
+              parent="root_menu"
+              groups="group_user" />
+</odoo>

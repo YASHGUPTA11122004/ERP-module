@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Software List"
+              id="configuration_software_menu"
+              sequence="10"
+              action="software_action_view_form"
+              parent="configuration_menu" />
+
+    <menuitem name="OS"
+              id="operating_system_menu"
+              sequence="21"
+              action="software_action_view_form"
+              parent="configuration_menu" />
+
+
+
+<!--    <menuitem name="Non-Consumable"-->
+<!--              id="non_consumable_menu"-->
+<!--              sequence="23"-->
+<!--              action="non_action_view_form"-->
+<!--              parent="configuration_menu" />-->
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Operating System List"
+        id="configuration_operating_system_menu"
+        sequence="20"
+        action="operating_system_action_view_form"
+        parent="configuration_menu" />
+</odoo>

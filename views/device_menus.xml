@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--    <menuitem name="Assets"-->
+<!--        id="device_menu"-->
+<!--        sequence="60"-->
+<!--        parent="root_menu"-->
+<!--        groups="group_user" />-->
+
+<!--    <menuitem name="Printers/Scanners"-->
+<!--        id="device_printer_menu"-->
+<!--        sequence="5"-->
+<!--        action="device_printer_action_view_form"-->
+<!--        parent="device_menu"-->
+<!--        groups="group_user" />-->
+
+<!--    <menuitem name="CCTVs"-->
+<!--        id="device_cctv_menu"-->
+<!--        sequence="10"-->
+<!--        action="device_cctv_action_view_form"-->
+<!--        parent="device_menu"-->
+<!--        groups="group_user" />-->
+
+</odoo>

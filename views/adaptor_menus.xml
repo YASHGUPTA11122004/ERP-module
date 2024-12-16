@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem name="Adaptors"
+              id="adaptor_menu"
+              sequence="60"
+              action="adaptor_action_view_form"
+              parent="root_menu"
+              groups="group_user" />
+</odoo>

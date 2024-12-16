@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- MENU ITEM -->
+    <menuitem name="Cameras"
+              id="camera_menu"
+              sequence="80"
+              action="camera_action_view_form"
+              parent="root_menu"
+              groups="group_user" />
+</odoo>

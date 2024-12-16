@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Other Items"
+        id="goods_menu"
+        sequence="70"
+        parent="root_menu"
+        groups="group_user" />
+
+<!--    <menuitem name="Supplies"-->
+<!--        id="supply_menu"-->
+<!--        sequence="10"-->
+<!--        action="supply_action_view_form"-->
+<!--        parent="goods_menu"-->
+<!--        groups="group_user" />-->
+
+<!--    <menuitem name="External HDDs/Pendrives"-->
+<!--        id="supply_pendrive_menu"-->
+<!--        sequence="20"-->
+<!--        action="supply_pendrive_action_view_form"-->
+<!--        parent="goods_menu"-->
+<!--        groups="group_user" />-->
+
+
+<!--   <menuitem-->
+<!--        name="Consumables"-->
+<!--        id="consumable_menu"-->
+<!--        sequence="10"-->
+<!--        action="consumable_action_view_form"-->
+<!--        parent="goods_menu"-->
+<!--        groups="group_user"-->
+<!--    />-->
+
+    <!-- Parent Menu for Non-Consumable Records -->
+<!--    <menuitem-->
+<!--        name="Non-Consumable Records"-->
+<!--        id="non_consumable_record_menu"-->
+<!--        parent="goods_menu"-->
+<!--        sequence="30"-->
+<!--        action="non_consumable_action_view_form"-->
+<!--        groups="base.group_user"-->
+<!--    />-->
+
+    <!-- Action for Non-Consumable Records Form -->
+    <record id="non_consumable_action_view_form" model="ir.actions.act_window">
+        <field name="name">Non-Consumable Records</field>
+        <field name="res_model">it_infra.non_consumable.record</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+
+
+    <menuitem name="Supplies"
+        id="supply_configuration_menu"
+        sequence="30"
+        parent="configuration_menu" />
+
+</odoo>

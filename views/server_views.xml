@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action for Server model -->
+    <record id="action_it_infra_server" model="ir.actions.act_window">
+        <field name="name">Servers</field>
+        <field name="res_model">it_infra.server</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>
+                Manage and view the details of all servers in the IT infrastructure.
+            </p>
+        </field>
+    </record>
+
+    <!-- Form view for Server model -->
+    <record id="view_form_it_infra_server" model="ir.ui.view">
+        <field name="name">it.infra.server.form</field>
+        <field name="model">it_infra.server</field>
+        <field name="arch" type="xml">
+            <form string="Server Details">
+                  <group>
+                    <field name="reference_number" readonly="1"/>
+                </group>
+                <header>
+                    <button name="action_draft" string="To Draft" type="object" invisible="state not in ['active','stored','decommissioned']"/>
+                    <button class="oe_highlight" name="action_active" string="To Active" type="object" invisible="state not in ['draft']"/>
+                    <button class="oe_highlight" name="action_stored" string="To Stored" type="object" invisible="state not in ['active']"/>
+
+                    <button class="oe_highlight" name="action_return" string="Return" type="object" odoo='{"invisible": [["status", "!=", "active"]]}'/>
+
+                    <button class="oe_highlight" name="action_decommissioned" string="To Decommissioned" type="object" invisible="state not in ['stored']"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Technical Details">
+                            <field name="name"/>
+                            <field name="server_type"/>
+                            <field name="ip_address"/>
+                            <field name="mac_address"/>
+                            <field name="os_id"/>
+                            <field name="processor"/>
+                            <field name="disk"/>
+                            <field name="ram"/>
+                            <field name="ram_type"/>
+                            <field name="other_configuration_details"/>
+                            <field name="location_id"/>
+                        </group>
+                        <group string="Warranty Details">
+                            <field name="date_of_purchase"/>
+                            <field name="warranty_period_months"/>
+                            <field name="warranty_expired"/>
+                            <field name="warranty_remaining" readonly="1"/>
+                            <field name="warranty_related_doc_certificate" filename="name"/>
+                        </group>
+
+                        <group string="Commercial Details">
+                            <field name="invoice_copy" filename="name"/>
+                            <field name="seller_email"/>
+                            <field name="seller_name"/>
+                            <field name="seller_contact"/>
+                            <field name="seller_website"/>
+                        </group>
+
+                        <group string="Issued To">
+                            <field name="employee"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+
+                        <page string="Maintenance History">
+                            <field name="server_maintenance_ids">
+                                <tree string="Maintenance History">
+                                    <field name="name"/>
+                                    <field name="date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Technical Update History">
+                            <field name="server_updation_ids">
+                                <tree string="Technical Update History">
+                                    <field name="name"/>
+                                    <field name="date"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view for Server model -->
+    <record id="view_tree_it_infra_server" model="ir.ui.view">
+        <field name="name">it.infra.server.tree</field>
+        <field name="model">it_infra.server</field>
+        <field name="arch" type="xml">
+            <tree string="Servers">
+                <field name="name"/>
+                <field name="processor"/>
+                <field name="ram"/>
+                <field name="disk"/>
+                <field name="server_type"/>
+                <field name="ip_address"/>
+                <field name="location_id"/>
+            </tree>
+        </field>
+    </record>
+    <menuitem id="it_infra_menu_servers" name="Servers" parent="root_menu" sequence="41" action="action_it_infra_server"/>
+</odoo>

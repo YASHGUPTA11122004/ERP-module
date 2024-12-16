@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Software"
+        id="software_category_menu"
+        sequence="50"
+        action="software_category_action_view_form"
+        parent="configuration_category_menu" />
+
+</odoo>

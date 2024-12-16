@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Laptops"
+              id="laptop_menu"
+              sequence="20"
+              action="laptop_action_view_form"
+              parent="root_menu"
+              groups="group_user"/>
+</odoo>

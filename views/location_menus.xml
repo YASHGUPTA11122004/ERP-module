@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Server Locations"
+        id="location_menu"
+        sequence="20"
+        action="location_action_view_form"
+        parent="configuration_menu" />
+
+</odoo>

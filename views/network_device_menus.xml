@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Network"
+        id="network_device_menu"
+        sequence="51"
+        parent="root_menu"
+        groups="group_user" />
+
+    <menuitem name="Routers"
+        id="network_device_router_menu"
+        sequence="10"
+        action="network_device_router_action_view_form"
+        parent="network_device_menu"
+        groups="group_user" />
+
+    <menuitem name="Switches"
+        id="network_device_switche_menu"
+        sequence="20"
+        action="network_device_switch_action_view_form"
+        parent="network_device_menu"
+        groups="group_user" />
+
+    <menuitem name="Access Points"
+        id="network_device_access_point_menu"
+        sequence="30"
+        action="network_device_access_point_action_view_form"
+        parent="network_device_menu"
+        groups="group_user" />
+
+</odoo>

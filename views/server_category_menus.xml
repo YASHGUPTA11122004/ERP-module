@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Servers"
+        id="server_category_menu"
+        sequence="10"
+        action="server_category_action_view_form"
+        parent="configuration_category_menu" />
+
+</odoo>

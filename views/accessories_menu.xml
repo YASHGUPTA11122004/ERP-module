@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- MENU ITEM -->
+    <menuitem name="Accessories"
+              id="accessory_menu"
+              sequence="20"
+              action="accessory_action_view_form"
+              parent="root_menu"
+              groups="group_user" />
+
+
+</odoo>

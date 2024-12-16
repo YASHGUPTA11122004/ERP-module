@@ -1,0 +1,130 @@
+<odoo>
+    <!-- Tree View for Non-Consumable Records -->
+    <record id="view_non_consumable_tree" model="ir.ui.view">
+        <field name="name">it_infra.non_consumable.tree</field>
+        <field name="model">it_infra.non_consumable.record</field>
+        <field name="arch" type="xml">
+            <tree string="Non-Consumable Records">
+                <field name="unique_id" readonly="1" string="Unique ID"/>
+                <field name="user"/>
+                <field name="date"/>
+                <field name="location"/>
+                <field name="item"/>
+                <field name="name"/>
+                <field name="model_number"/>
+                <field name="serial_number"/>
+                <field name="part_number"/>
+                <field name="purchase"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for Non-Consumable Record -->
+    <record id="view_non_consumable_form" model="ir.ui.view">
+        <field name="name">it_infra.non_consumable.form</field>
+        <field name="model">it_infra.non_consumable.record</field>
+        <field name="arch" type="xml">
+            <form string="Non-Consumable Record">
+                <header>
+                    <button name="action_draft" string="To Draft" type="object" odoo='{"invisible": [["status", "!=", "active"]]}'/>
+                    <button class="oe_highlight" name="action_active" string="To Stock" type="object" odoo='{"invisible": [["status", "!=", "draft"]]}'/>
+                    <button class="oe_highlight" name="action_stored" string="To Issue" type="object" odoo='{"invisible": [["status", "!=", "active"]]}'/>
+
+                    <button class="oe_highlight" name="action_return" string="Return" type="object" odoo='{"invisible": [["status", "!=", "active"]]}'/>
+
+                    <button class="oe_highlight" name="action_decommissioned" string="To Decommissioned" type="object" odoo='{"invisible": [["status", "!=", "stored"]]}'/>
+                    <field name="status" widget="statusbar" statusbar_visible="draft,active,stored,decommissioned"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="unique_id" readonly="1" string="Unique ID"/>
+                        <field name="item" placeholder="Select Item" required="1"/>
+                        <field name="name" placeholder="Enter" required="1"/>
+                        <field name="model_number" placeholder="Enter Model Number"/>
+                        <field name="serial_number" placeholder="Enter Serial Number"/>
+                        <field name="part_number" placeholder="Enter Part Number"/>
+                        <field name="location" placeholder="Enter Location"/>
+                    </group>
+
+                    <group>
+                        <field name="description" placeholder="Enter additional details" widget="text"/>
+                    </group>
+
+                    <group>
+                        <field name="user" required="1"/>
+                        <field name="date" required="1"/>
+<!--                        <field name="purchase" widget="boolean_toggle"/>-->
+                    </group>
+                      <group>
+                         <group string="Warranty Details">
+                        <field name="warranty"/>
+                        <field name="warranty_expiration" readonly="1"/>
+                        <field name="warranty_remaining" readonly="1"/>
+                        <field name="warranty_certificate" filename="attachment_name" string="Warranty Certificate" widget="binary"/>
+                    </group>
+                    <group string="Commercial Details">
+                            <field name="invoice_copy" widget="binary" />
+                            <field name="supplier_email" />
+                            <field name="supplier_name" />
+                            <field name="supplier_contact" />
+                            <field name="supplier_website" />
+                    </group>
+
+                    </group>
+
+                    <notebook>
+                        <page string="Maintenance">
+                            <field name="maintenance_ids">
+                                <tree string="Maintenance Records" editable="bottom">
+                                    <field name="maintenance_date"/>
+                                    <field name="maintenance_description"/>
+                                    <field name="performed_by"/>
+                                    <field name="status"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Updation">
+                            <field name="updation_ids">
+                                <tree string="Updation Records" editable="bottom">
+                                    <field name="update_date"/>
+                                    <field name="update_description"/>
+                                    <field name="performed_by"/>
+                                    <field name="status"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Sequence for Unique ID -->
+    <data noupdate="1">
+        <record id="seq_it_infra_non_consumable_record" model="ir.sequence">
+            <field name="name">Non-Consumable Record Unique ID</field>
+            <field name="code">it_infra.non_consumable.record</field>
+            <field name="prefix">NCR-</field>
+            <field name="padding">5</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+
+    <!-- Action to open the list (Tree View) and form (Form View) -->
+    <record id="non_consumable_action_view_tree" model="ir.actions.act_window">
+        <field name="name">Non-Consumable Records</field>
+        <field name="res_model">it_infra.non_consumable.record</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <!-- Menu item to access Non-Consumable Records -->
+    <menuitem
+        name="Non-Consumable Records"
+        id="non_consumable_record_menu"
+        parent="goods_menu"
+        sequence="40"
+        action="non_consumable_action_view_tree"
+        groups="base.group_user"
+    />
+</odoo>

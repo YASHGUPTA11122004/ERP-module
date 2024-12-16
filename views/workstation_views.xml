@@ -1,0 +1,108 @@
+<odoo>
+    <!-- Workstation Form View -->
+    <record id="view_it_infra_workstation_form" model="ir.ui.view">
+        <field name="name">it_infra.workstation.form</field>
+        <field name="model">it_infra.workstation</field>
+        <field name="arch" type="xml">
+            <form string="Workstation">
+                 <group>
+                    <field name="reference_number" readonly="1"/>
+                </group>
+                <header>
+                    <button name="action_draft" string="To Draft" type="object" invisible="state not in ['active','stored','decommissioned']"/>
+                    <button class="oe_highlight" name="action_active" string="To Active" type="object" invisible="state not in ['draft']"/>
+                    <button class="oe_highlight" name="action_stored" string="To Stored" type="object" invisible="state not in ['active']"/>
+
+                    <button class="oe_highlight" name="action_return" string="Return" type="object" odoo='{"invisible": [["status", "!=", "active"]]}'/>
+
+                    <button class="oe_highlight" name="action_decommissioned" string="To Decommissioned" type="object" invisible="state not in ['stored']"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                          <group string="Technical Details">
+                        <field name="workstation_name"/>
+                        <field name="ip_address"/>
+                        <field name="mac_address"/>
+                        <field name="os_id"/>
+                        <field name="processor"/>
+                        <field name="disk"/>
+                        <field name="ram"/>
+                               <field name="ram_type"/>
+                        <field name="other_configuration_details"/>
+                        <field name="installed_location"/>
+                    </group>
+                    <group string="Warranty Details">
+                        <field name="purchase_date"/>
+                        <field name="warranty_months"/>
+                        <field name="warranty_expiration" readonly="1"/>
+                        <field name="warranty_remaining" readonly="1"/>
+                        <field name="warranty_certificate" widget="binary"/>
+                    </group>
+                    <group string="Commercial Details">
+                        <field name="invoice_copy" widget="binary"/>
+                        <field name="seller_name"/>
+                        <field name="seller_email"/>
+                        <field name="seller_contact"/>
+                        <field name="seller_website"/>
+                    </group>
+                        <group string="Issued To">
+                             <field name="employee"/>
+                        </group>
+                    </group>
+
+
+                    <notebook>
+
+                        <page string="Maintenance History">
+                            <field name="maintenance_history_ids" widget="one2many_list">
+                                <tree editable="bottom">
+                                    <field name="maintenance_date"/>
+                                    <field name="description"/>
+                                    <field name="performed_by"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Updation History">
+                            <field name="updation_history_ids" widget="one2many_list">
+                                <tree editable="bottom">
+                                    <field name="update_date"/>
+                                    <field name="update_description"/>
+                                    <field name="updated_by"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Workstation Tree View -->
+    <record id="view_it_infra_workstation_tree" model="ir.ui.view">
+        <field name="name">it_infra.workstation.tree</field>
+        <field name="model">it_infra.workstation</field>
+        <field name="arch" type="xml">
+            <tree string="Workstation List">
+                <field name="workstation_name"/>
+                <field name="ip_address"/>
+                <field name="mac_address"/>
+                <field name="operating_system"/>
+                <field name="processor"/>
+                <field name="disk"/>
+                <field name="ram"/>
+                <field name="installed_location"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for Workstation Form and List View -->
+    <record id="workstation_action_view_form" model="ir.actions.act_window">
+        <field name="name">Workstation</field>
+        <field name="res_model">it_infra.workstation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Workstation Menu Item -->
+    <menuitem name="Work Station" id="workstation_menu" sequence="40" parent="root_menu" action="workstation_action_view_form"/>
+</odoo>
