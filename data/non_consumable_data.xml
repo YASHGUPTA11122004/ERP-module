@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Non-Consumable Item Records -->
+    <record id="non_consumable_item_wireless_keyboard_mouse" model="it_infra.non_consumable.item">
+        <field name="name">Wireless Keyboard Mouse</field>
+        <field name="description">Wireless Keyboard Mouse</field>
+    </record>
+
+    <record id="non_consumable_item_usb_hub" model="it_infra.non_consumable.item">
+        <field name="name">USB Hub</field>
+        <field name="description">USB Hub</field>
+    </record>
+
+    <record id="non_consumable_item_dlink_8_port_switch" model="it_infra.non_consumable.item">
+        <field name="name">D-Link 8 Port Switch</field>
+        <field name="description">D-Link 8 Port Switch</field>
+    </record>
+
+    <record id="non_consumable_item_crimping_tool" model="it_infra.non_consumable.item">
+        <field name="name">Crimping Tool and Punchy + Other Tool</field>
+        <field name="description">Crimping Tool and Punchy + Other Tool</field>
+    </record>
+
+    <record id="non_consumable_item_dlink_5_port_switch" model="it_infra.non_consumable.item">
+        <field name="name">D-Link 5 Port Switch</field>
+        <field name="description">D-Link 5 Port Switch</field>
+    </record>
+
+    <record id="non_consumable_item_network_rack" model="it_infra.non_consumable.item">
+        <field name="name">Network Rack</field>
+        <field name="description">Network Rack</field>
+    </record>
+
+    <record id="non_consumable_item_wireless_access_points" model="it_infra.non_consumable.item">
+        <field name="name">Wireless Access Points</field>
+        <field name="description">Wireless Access Points</field>
+    </record>
+
+    <record id="non_consumable_item_belkin_surge_protector" model="it_infra.non_consumable.item">
+        <field name="name">Belkin Surge Protector</field>
+        <field name="description">Belkin Surge Protector</field>
+    </record>
+
+    <record id="non_consumable_item_monitor" model="it_infra.non_consumable.item">
+        <field name="name">Monitor</field>
+        <field name="description">Monitor</field>
+    </record>
+
+    <record id="non_consumable_item_liu_loaded" model="it_infra.non_consumable.item">
+        <field name="name">LIU Loaded</field>
+        <field name="description">LIU Loaded</field>
+    </record>
+
+    <record id="non_consumable_item_net_gear_24_port_switch" model="it_infra.non_consumable.item">
+        <field name="name">Net Gear 24 Port Switch</field>
+        <field name="description">Net Gear 24 Port Switch</field>
+    </record>
+
+    <record id="non_consumable_item_wired_keyboard_mouse" model="it_infra.non_consumable.item">
+        <field name="name">Wired Keyboard Mouse</field>
+        <field name="description">Wired Keyboard Mouse</field>
+    </record>
+
+    <record id="non_consumable_item_smps" model="it_infra.non_consumable.item">
+        <field name="name">SMPS</field>
+        <field name="description">SMPS</field>
+    </record>
+
+    <record id="non_consumable_item_mrl_microphone" model="it_infra.non_consumable.item">
+        <field name="name">MRL Microphone</field>
+        <field name="description">MRL Microphone</field>
+    </record>
+
+    <record id="non_consumable_item_web_cameras" model="it_infra.non_consumable.item">
+        <field name="name">Web Cameras</field>
+        <field name="description">Web Cameras</field>
+    </record>
+
+    <record id="non_consumable_item_ib_port_25_fp_non_poe_switch" model="it_infra.non_consumable.item">
+        <field name="name">IB Port 25 FP Non-POE Switch</field>
+        <field name="description">IB Port 25 FP Non-POE Switch</field>
+    </record>
+
+    <record id="non_consumable_item_speaker_usb_hp_headphone" model="it_infra.non_consumable.item">
+        <field name="name">Speaker USB HP/Headphone</field>
+        <field name="description">Speaker USB HP/Headphone</field>
+    </record>
+
+    <record id="non_consumable_item_ups_600_1kva" model="it_infra.non_consumable.item">
+        <field name="name">UPS 600+ 1KVA</field>
+        <field name="description">UPS 600+ 1KVA</field>
+    </record>
+
+    <record id="non_consumable_item_dlink_sfp_sw" model="it_infra.non_consumable.item">
+        <field name="name">D-Link SFP S/W (S+2)</field>
+        <field name="description">D-Link SFP S/W (S+2)</field>
+    </record>
+
+    <record id="non_consumable_item_laptops" model="it_infra.non_consumable.item">
+        <field name="name">Laptops</field>
+        <field name="description">Laptops</field>
+    </record>
+
+    <record id="non_consumable_item_poe_adaptor" model="it_infra.non_consumable.item">
+        <field name="name">POE Adaptor (POE Supply)</field>
+        <field name="description">POE Adaptor (POE Supply)</field>
+    </record>
+
+    <record id="non_consumable_item_printers" model="it_infra.non_consumable.item">
+        <field name="name">Printers</field>
+        <field name="description">Printers</field>
+    </record>
+
+    <record id="non_consumable_item_old_laptops" model="it_infra.non_consumable.item">
+        <field name="name">Old Laptops</field>
+        <field name="description">Old Laptops</field>
+    </record>
+
+    <record id="non_consumable_item_aa_aaa_battery_charger" model="it_infra.non_consumable.item">
+        <field name="name">AA+AAA Battery Charger</field>
+        <field name="description">AA+AAA Battery Charger</field>
+    </record>
+
+    <record id="non_consumable_item_converter" model="it_infra.non_consumable.item">
+        <field name="name">Converter</field>
+        <field name="description">Converter</field>
+    </record>
+
+    <record id="non_consumable_item_pointer_logitech" model="it_infra.non_consumable.item">
+        <field name="name">Pointer Logitech</field>
+        <field name="description">Pointer Logitech</field>
+    </record>
+
+    <record id="non_consumable_item_lan_tester" model="it_infra.non_consumable.item">
+        <field name="name">LAN Tester</field>
+        <field name="description">LAN Tester</field>
+    </record>
+
+    <record id="non_consumable_item_lenevo" model="it_infra.non_consumable.item">
+        <field name="name">Lenevo</field>
+        <field name="description">Lenevo</field>
+    </record>
+
+    <record id="non_consumable_item_65w_adaptor" model="it_infra.non_consumable.item">
+        <field name="name">65W Adaptor</field>
+        <field name="description">65W Adaptor</field>
+    </record>
+
+    <record id="non_consumable_item_switches" model="it_infra.non_consumable.item">
+        <field name="name">Switches</field>
+        <field name="description">Switches</field>
+    </record>
+
+    <record id="non_consumable_item_serial_server" model="it_infra.non_consumable.item">
+        <field name="name">Serial Server</field>
+        <field name="description">Serial Server</field>
+    </record>
+
+    <record id="non_consumable_item_scanner" model="it_infra.non_consumable.item">
+        <field name="name">Scanner</field>
+        <field name="description">Document Scanner</field>
+    </record>
+
+    <record id="non_consumable_item_cctv" model="it_infra.non_consumable.item">
+        <field name="name">CCTV</field>
+        <field name="description">Surveillance Camera</field>
+    </record>
+
+    <record id="non_consumable_item_dome_cctv" model="it_infra.non_consumable.item">
+        <field name="name">Dome CCTV</field>
+        <field name="description">Dome Surveillance Camera</field>
+    </record>
+
+    <record id="non_consumable_item_bullet_cctv" model="it_infra.non_consumable.item">
+        <field name="name">Bullet CCTV</field>
+        <field name="description">Bullet Surveillance Camera</field>
+    </record>
+
+    <record id="non_consumable_item_ptz_cctv" model="it_infra.non_consumable.item">
+        <field name="name">PTZ CCTV</field>
+        <field name="description">Pan-Tilt-Zoom Surveillance Camera</field>
+    </record>
+</odoo>

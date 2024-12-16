@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Consumable Item Records -->
+    <record id="consumable_item_io_boxxs" model="it_infra.consumable.item">
+        <field name="name">I/O Boxs</field>
+        <field name="description">I/O Boxs</field>
+    </record>
+
+    <record id="consumable_item_cmos_battery" model="it_infra.consumable.item">
+        <field name="name">CMOS Battery</field>
+        <field name="description">CMOS Battery</field>
+    </record>
+
+    <record id="consumable_item_hdmi_cables" model="it_infra.consumable.item">
+        <field name="name">HDMI Cables</field>
+        <field name="description">HDMI Cables</field>
+    </record>
+
+    <record id="consumable_item_internal_hardisk" model="it_infra.consumable.item">
+        <field name="name">Internal Hardisk</field>
+        <field name="description">Internal Hardisk</field>
+    </record>
+
+    <record id="consumable_item_cable_ties" model="it_infra.consumable.item">
+        <field name="name">Cable Tie's</field>
+        <field name="description">Cable Tie's</field>
+    </record>
+
+    <record id="consumable_item_rs45_connection_jack" model="it_infra.consumable.item">
+        <field name="name">RS45 Connection Jack</field>
+        <field name="description">RS45 Connection Jack</field>
+    </record>
+
+    <record id="consumable_item_external_harddisk" model="it_infra.consumable.item">
+        <field name="name">External Harddisk</field>
+        <field name="description">External Harddisk</field>
+    </record>
+
+    <record id="consumable_item_ddr3_desktop_ram" model="it_infra.consumable.item">
+        <field name="name">DDR3 Desktop RAM</field>
+        <field name="description">DDR3 Desktop RAM</field>
+    </record>
+
+    <record id="consumable_item_ddr4_ram" model="it_infra.consumable.item">
+        <field name="name">DDR4 RAM</field>
+        <field name="description">DDR4 RAM</field>
+    </record>
+
+    <record id="consumable_item_spf_modules" model="it_infra.consumable.item">
+        <field name="name">SPF Modules</field>
+        <field name="description">SPF Modules</field>
+    </record>
+
+    <record id="consumable_item_lenovo_l450_laptop_battery" model="it_infra.consumable.item">
+        <field name="name">Lenovo L450 Laptop Battery</field>
+        <field name="description">Lenovo L450 Laptop Battery</field>
+    </record>
+
+    <record id="consumable_item_cat6_patch_cords" model="it_infra.consumable.item">
+        <field name="name">Cat6 Patch Cords</field>
+        <field name="description">Cat6 Patch Cords</field>
+    </record>
+
+    <record id="consumable_item_nde_interface_card" model="it_infra.consumable.item">
+        <field name="name">NDE Interface Card</field>
+        <field name="description">NDE Interface Card</field>
+    </record>
+
+    <record id="consumable_item_label_cartridge" model="it_infra.consumable.item">
+        <field name="name">Label Cartridge</field>
+        <field name="description">Label Cartridge</field>
+    </record>
+
+    <record id="consumable_item_rechargeable_batteries" model="it_infra.consumable.item">
+        <field name="name">Rechargeable Batteries</field>
+        <field name="description">Rechargeable Batteries</field>
+    </record>
+
+    <record id="consumable_item_ssd_hdd" model="it_infra.consumable.item">
+        <field name="name">SSD HDD</field>
+        <field name="description">SSD HDD</field>
+    </record>
+
+    <record id="consumable_item_pci_exp_graphic_card" model="it_infra.consumable.item">
+        <field name="name">PCI EXP Graphic Card</field>
+        <field name="description">PCI EXP Graphic Card</field>
+    </record>
+
+    <record id="consumable_item_ups_batteries_124_7ah" model="it_infra.consumable.item">
+        <field name="name">UPS Batteries (124 7AH)</field>
+        <field name="description">UPS Batteries (124 7AH)</field>
+    </record>
+
+    <record id="consumable_item_l450_keyboard" model="it_infra.consumable.item">
+        <field name="name">L450 Keyboard</field>
+        <field name="description">L450 Keyboard</field>
+    </record>
+
+    <record id="consumable_item_mouse_pad" model="it_infra.consumable.item">
+        <field name="name">Mouse Pad</field>
+        <field name="description">Mouse Pad</field>
+    </record>
+
+    <record id="consumable_item_external_hdd" model="it_infra.consumable.item">
+        <field name="name">External HDD</field>
+        <field name="description">External HDD</field>
+    </record>
+
+    <record id="consumable_item_wire_cutter" model="it_infra.consumable.item">
+        <field name="name">Wire Cutter</field>
+        <field name="description">Wire Cutter</field>
+    </record>
+
+    <record id="consumable_item_software_purchase_and_issue" model="it_infra.consumable.item">
+        <field name="name">Software Purchase and Issue</field>
+        <field name="description">Software Purchase and Issue</field>
+    </record>
+
+    <record id="consumable_item_usb_pendrive" model="it_infra.consumable.item">
+        <field name="name">USB Pendrive</field>
+        <field name="description">USB Pendrive</field>
+    </record>
+
+    <record id="consumable_item_memory_cards" model="it_infra.consumable.item">
+        <field name="name">Memory Cards</field>
+        <field name="description">Memory Cards</field>
+    </record>
+
+    <record id="consumable_item_windows_11_pro" model="it_infra.consumable.item">
+        <field name="name">Windows 11 Pro</field>
+        <field name="description">Windows 11 Pro</field>
+    </record>
+
+    <record id="consumable_item_access_pair_license" model="it_infra.consumable.item">
+        <field name="name">Access Pair Licence</field>
+        <field name="description">Access Pair Licence</field>
+    </record>
+
+    <record id="consumable_item_internal_harddrive" model="it_infra.consumable.item">
+        <field name="name">Internal Harddrive</field>
+        <field name="description">Internal Harddrive</field>
+    </record>
+
+    <record id="consumable_item_antivirus" model="it_infra.consumable.item">
+        <field name="name">Antivirus</field>
+        <field name="description">Antivirus</field>
+    </record>
+
+    <record id="consumable_item_ink_cartridge_727" model="it_infra.consumable.item">
+        <field name="name">Ink Cartridge 727</field>
+        <field name="description">Ink Cartridge 727</field>
+    </record>
+
+    <record id="consumable_item_pig_tail" model="it_infra.consumable.item">
+        <field name="name">Pig Tail</field>
+        <field name="description">Pig Tail</field>
+    </record>
+</odoo>
